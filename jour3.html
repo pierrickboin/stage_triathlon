@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jour 1 - Stage Triathlon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📅 Jour 1 — Mise en jambes</h1>
+    <p>Cliquez sur une image pour l'afficher en plein écran</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="jour1.html" class="active">Jour 1</a>
+    <a href="jour2.html">Jour 2</a>
+    <a href="jour3.html">Jour 3</a>
+    <a href="velo-libre.html">Vélo Libre</a>
+    <a href="cap-libre.html">CAP Libre</a>
+  </nav>
+
+  <main>
+    <!-- PARCOURS 1 -->
+    <article class="parcours-card">
+      <div class="parcours-header">
+        <h2 class="parcours-title">Parcours 1 — Groupe Cool / Découverte</h2>
+        <div class="badges">
+          <span class="badge">📏 75 km</span>
+          <span class="badge denivele">⛰️ 850 m D+</span>
+        </div>
+      </div>
+      <p class="parcours-desc">
+        Idéal pour prendre ses repères en groupe. Routes roulantes avec une seule belle bosse à mi-parcours (point d'eau sur la place du village au km 40).
+      </p>
+
+      <div class="visuels">
+        <div class="visuel-item">
+          <span>Tracé sur carte</span>
+          <img src="images/j1-p1-carte.png" alt="Carte Jour 1 Parcours 1" onclick="openLightbox(this.src)">
+        </div>
+        <div class="visuel-item">
+          <span>Profil altimétrique</span>
+          <img src="images/j1-p1-profil.png" alt="Dénivelé Jour 1 Parcours 1" onclick="openLightbox(this.src)">
+        </div>
+      </div>
+
+      <a href="gpx/j1-parcours1-75km.gpx" download class="btn-download">
+        📥 Télécharger le GPX (75 km)
+      </a>
+    </article>
+
+    <!-- PARCOURS 2 -->
+    <article class="parcours-card">
+      <div class="parcours-header">
+        <h2 class="parcours-title">Parcours 2 — Groupe Costaud</h2>
+        <div class="badges">
+          <span class="badge">📏 105 km</span>
+          <span class="badge denivele">⛰️ 1 450 m D+</span>
+        </div>
+      </div>
+      <p class="parcours-desc">
+        Même départ que le groupe 1, puis rallonge par la vallée avec deux cols supplémentaires avant le retour.
+      </p>
+
+      <div class="visuels">
+        <div class="visuel-item">
+          <span>Tracé sur carte</span>
+          <img src="images/j1-p2-carte.png" alt="Carte Jour 1 Parcours 2" onclick="openLightbox(this.src)">
+        </div>
+        <div class="visuel-item">
+          <span>Profil altimétrique</span>
+          <img src="images/j1-p2-profil.png" alt="Dénivelé Jour 1 Parcours 2" onclick="openLightbox(this.src)">
+        </div>
+      </div>
+
+      <a href="gpx/j1-parcours2-105km.gpx" download class="btn-download">
+        📥 Télécharger le GPX (105 km)
+      </a>
+    </article>
+  </main>
+
+  <!-- Visionneuse plein écran -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="Zoom">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
